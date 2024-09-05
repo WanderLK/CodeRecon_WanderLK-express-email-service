@@ -14,20 +14,9 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-const generateOTP = () => {
-  return otpGenerator.generate(6, {
-    lowerCaseAlphabets: false,
-    upperCaseAlphabets: false,
-    specialChars: false
-  });
-};
 
 const otpMail = async (req, res) => {
-  const { firstname, email } = req.body;
-
-  const otp = generateOTP();
-
-  req.app.locals.OTP = otp 
+  const { firstname, email, otp } = req.body;
 
   const mailOptions = {
     from: process.env.EMAIL,
@@ -212,4 +201,4 @@ const completeddMail = async(req,res) =>{
   }
 }
 
-module.exports = { generateOTP, otpMail, approvedMail,denieddMail,completeddMail };
+module.exports = { otpMail, approvedMail,denieddMail,completeddMail };
