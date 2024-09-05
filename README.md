@@ -58,3 +58,10 @@ nodemon server.js
 ## Endpoint Test
 
 Import postman collection "WanderLK.postman_collection" to 'postman'
+
+## Docker Builds
+
+```bash
+docker build -t my-express-app .
+docker run -p 4040:4040 --name my-express-app-container my-express-app
+```
