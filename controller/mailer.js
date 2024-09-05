@@ -85,7 +85,8 @@ const approvedMail = async(req,res) =>{
                   Hi ${firstname},
               </div>
               <div style="font-family: 'Poppins', sans-serif; font-size: 15px; line-height: 22px; color: #000000; margin-bottom: 30px;">
-                  Your visa request has been<b> approved <b/>
+                  Your visa request has been<b> approved </b>
+                  <br><br>
                   If you have any questions or need assistance, feel free to reply to this email.
                   <br><br>
                   Thank you!
